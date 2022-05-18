@@ -1,0 +1,59 @@
+.landing-page {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.home-page-banner-div {
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+}
+.home-page-banner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.home-page-banner-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 1;
+}
+.login-signup {
+    width: 50vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 40px;
+}
+.home-page-logo {
+    width: 50px;
+}
+.home-page-text {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.home-page-heading {
+    font-size: calc(2.5 * (1.5vh + 1.1vw));
+    margin: 30px 0;
+}
+.landing-page-privacy-policy {
+    margin-top: 30px;
+    max-width: 350px;
+    color: rgb(113, 118, 123);
+}
+.landing-page-privacy-policy span {
+    color: #1d9bf0;
+    cursor: pointer;
+}
+.landing-page-privacy-policy span:hover {
+    text-decoration: 1px solid underline;
+}

@@ -1,0 +1,15 @@
+.home-page {
+    background-color: black;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.home-page-right-container {
+    display: flex;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    display: none;
+}

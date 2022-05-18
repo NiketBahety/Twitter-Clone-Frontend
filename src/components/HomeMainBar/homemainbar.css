@@ -1,0 +1,67 @@
+.home-main-bar {
+    min-height: 100vh;
+    min-width: max(45vw, 500px);
+    max-width: 500px;
+    border-left: 1px solid #232628;
+    border-right: 1px solid #232628;
+    font-family: Poppins;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+.home-bar-navbar {
+    padding: 11px 20px;
+    display: flex;
+    justify-content: space-between;
+    min-width: max(45vw, 300px);
+    max-width: 500px;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.921);
+    backdrop-filter: blur(2px);
+    z-index: 2;
+}
+.home-bar-navbar h2 {
+    font-size: max(calc(0.9 * (1.5vh + 1.1vw)), 18px);
+}
+.create-tweet {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #232628;
+    padding: 0px 20px 10px 20px;
+}
+.create-tweet-first-div {
+    display: flex;
+    align-items: flex-start;
+}
+.create-tweet-first-div textarea {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    resize: none;
+    flex-grow: 1;
+    padding: 10px;
+}
+.create-tweet-first-div textarea:focus {
+    border-bottom: 1px solid #232628;
+}
+::placeholder {
+    color: #5e5e5e;
+}
+.create-tweet-second-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.create-tweet-second-div-icons {
+    padding-left: 5%;
+    display: flex;
+    justify-content: space-between;
+}

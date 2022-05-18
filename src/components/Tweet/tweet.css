@@ -1,0 +1,85 @@
+.tweet-comp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #232628;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+.tweet-right-cont {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 15px;
+}
+.tweeter-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tweeter-name-names span {
+    padding-right: 5px;
+    font-size: 15px;
+}
+.tweeter-name-names .username,
+.tweeter-name-names .time {
+    color: #686c71;
+    padding-right: 10px;
+    font-size: 14px;
+}
+.tweeter-name-names .username:hover {
+    text-decoration: underline;
+}
+.tweet-content {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    white-space: pre-line;
+    width: 100%;
+}
+.tweet-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    width: 85%;
+}
+.tweet-actions div {
+    display: flex;
+    align-items: center;
+}
+.tweet-actions span {
+    color: #71767b;
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.tweet-actions .comment:hover span {
+    color: #1d9bf0;
+}
+.tweet-actions .retweet:hover span {
+    color: #00ba7c;
+}
+.tweet-actions .like:hover span {
+    color: #f91880;
+}
+.tweet-actions .share:hover span {
+    color: #1d9bf0;
+}
+.tweet-actions .comment:hover .material-icons {
+    color: #1d9bf0 !important;
+    background-color: #031e30 !important;
+}
+.tweet-actions .retweet:hover .material-icons {
+    color: #00ba7c !important;
+    background-color: #003322 !important;
+}
+.tweet-actions .like:hover .material-icons {
+    color: #f91880 !important;
+    background-color: #320118 !important;
+}
+.tweet-actions .share:hover .material-icons {
+    color: #1d9bf0 !important;
+    background-color: #031e30 !important;
+}

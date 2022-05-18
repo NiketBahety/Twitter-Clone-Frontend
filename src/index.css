@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.central-main-bar {
+    min-height: 100vh;
+    min-width: max(45vw, 500px);
+    max-width: 500px;
+    border-left: 1px solid #232628;
+    border-right: 1px solid #232628;
+    font-family: Poppins;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}

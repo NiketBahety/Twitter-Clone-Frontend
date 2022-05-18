@@ -1,0 +1,72 @@
+.landing-page-form-background {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5b708364;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+.landing-page-form-container {
+    background-color: black;
+    padding: 0 70px;
+    border-radius: 20px;
+    width: 500px;
+}
+.landing-page-form-container-header {
+    width: 100%;
+    display: flex;
+}
+.cross-btn,
+.form-twitter-logo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    padding: 20px 0;
+}
+.cross-btn .material-icons {
+    font-size: 30px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+    cursor: pointer;
+    transform: translateX(-50px);
+}
+.material-icons:hover {
+    background-color: rgba(255, 255, 255, 0.139);
+}
+.popup-form {
+    display: flex;
+    flex-direction: column;
+}
+.popup-form input {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 10px 0;
+    font-size: 18px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgb(68, 68, 68);
+    box-shadow: none;
+    color: white;
+    border-radius: 5px;
+}
+.popup-form input:focus {
+    border: 1px solid #1d9bf0;
+    color: #1d9bf0;
+}
+.landing-page-form-footer {
+    padding: 20px 0;
+}
+.landing-page-form-footer button {
+    width: 100%;
+}

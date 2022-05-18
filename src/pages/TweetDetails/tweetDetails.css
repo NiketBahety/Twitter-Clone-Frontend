@@ -1,0 +1,46 @@
+.tweet-details-page {
+    padding-bottom: 20px;
+}
+.tweet-details-navbar {
+    display: flex;
+    align-items: center;
+}
+.tweet-details-navbar h2 {
+    padding-left: 20px;
+}
+.tweet-details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #232628;
+    padding-bottom: 10px;
+}
+.tweet-details-contents {
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: normal;
+    color: rgb(218, 218, 218);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 25px;
+}
+.tweet-details-time {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #686c71;
+}
+.tweet-action-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: 1px solid #232628;
+}
+.tweet-action-details div span {
+    color: #686c71;
+    padding-left: 5px;
+}
+.create-comment {
+    padding-top: 20px;
+    border-bottom: 1px solid #232628;
+}
