@@ -43,7 +43,7 @@ const LeftSideBar = () => {
                     <Link to="/messages">
                         <Icon text="mail" hoverFill="#181a1b"></Icon>
                     </Link>
-                    <Link to="/profile">
+                    <Link to={'/users/' + user._id}>
                         <Icon text="person" hoverFill="#181a1b"></Icon>
                     </Link>
                     <Link to="/more">
