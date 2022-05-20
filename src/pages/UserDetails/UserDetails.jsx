@@ -23,12 +23,12 @@ const UserDetails = () => {
     }
     let user = usersList.filter((a) => a._id === userID)[0];
 
-    useEffect(() => {
-        dispatch(getAllUsers());
-    }, [followState, dispatch, user]);
-
     const userTweets = user?.tweets || [];
     const oUser = JSON.parse(localStorage.getItem('Profile'));
+
+    useEffect(() => {
+        dispatch(getAllUsers());
+    }, [followState, dispatch, oUser]);
 
     if (user?.followers.includes(oUser._id)) followState = true;
 
