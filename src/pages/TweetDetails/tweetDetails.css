@@ -44,3 +44,8 @@
     padding-top: 20px;
     border-bottom: 1px solid #232628;
 }
+.tweet-details img {
+    padding: 10px 0 0 0;
+    width: 90%;
+    margin: auto;
+}

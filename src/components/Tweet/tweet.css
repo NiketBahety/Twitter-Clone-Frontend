@@ -83,3 +83,8 @@
     color: #1d9bf0 !important;
     background-color: #031e30 !important;
 }
+
+.tweet-right-cont img {
+    padding: 10px 0 0 0;
+    width: 100%;
+}

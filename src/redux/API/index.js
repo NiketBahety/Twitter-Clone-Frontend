@@ -14,7 +14,11 @@ export const signup = (authData) => API.post('/users/signup', authData);
 
 export const getAllTweets = () => API.get('/tweets/getAllTweets');
 export const postTweet = (tweetData) =>
-    API.post('/tweets/postTweet', tweetData);
+    API.post('/tweets/postTweet', tweetData, {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        },
+    });
 
 export const retweet = (id) => API.patch(`/tweets/retweet/${id}`);
 export const like = (id) => API.patch(`/tweets/like/${id}`);

@@ -89,6 +89,10 @@ const TweetDetails = () => {
                     )}
                 </div>
                 <div className="tweet-details-contents">{tweet?.tweet}</div>
+                <img
+                    src={'https://twitter-niket.herokuapp.com/' + tweet?.image}
+                    alt=""
+                />
                 <div className="tweet-details-time">
                     {moment(tweet?.postedOn).format('hh:mm a')} &#183;{' '}
                     {moment(tweet?.postedOn).format('LL')}

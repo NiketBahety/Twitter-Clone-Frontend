@@ -16,12 +16,15 @@ const HomeMainBar = (props) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [tweet, setTweet] = useState('');
+    const [imagePreview, setImagePreview] = useState('');
+    const [imageFile, setImageFile] = useState({});
     let tweetsList;
 
     const handleTweetClick = (e) => {
         if (tweet === '') toast.error('Tweet cannot be empty');
         else {
-            dispatch(postTweet({ tweet }));
+            dispatch(postTweet({ tweet, tweetImage: imageFile }));
+            setImagePreview('');
             setTweet('');
         }
     };
@@ -31,11 +34,31 @@ const HomeMainBar = (props) => {
         navigate(navLink);
     };
 
+    const handleImagePreview = (e) => {
+        const file = e.target.files[0];
+        setImageFile(file);
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.addEventListener('load', function () {
+                setImagePreview(this.result);
+            });
+
+            reader.readAsDataURL(file);
+        }
+    };
+
+    const handleImagePreviewClose = () => {
+        setImagePreview('');
+        setImageFile({});
+    };
+
     useEffect(() => {
         const tweetTextarea =
             document.getElementsByClassName('tweet-textarea')[0];
         tweetTextarea.style.height = tweetTextarea.scrollHeight + 'px';
-        if (tweet == '') tweetTextarea.style.height = 'auto';
+        if (tweet === '') tweetTextarea.style.height = 'auto';
 
         dispatch(getAllTweets());
     }, [tweet, location, dispatch]);
@@ -65,16 +88,39 @@ const HomeMainBar = (props) => {
                         value={tweet}
                     ></textarea>
                 </div>
+                <div
+                    className="image-preview-div"
+                    style={{ display: imagePreview === '' ? 'none' : 'flex' }}
+                >
+                    <Icon
+                        text="close"
+                        fontSize="18px"
+                        width="35px"
+                        height="35px"
+                        color="white"
+                        fill="#333"
+                        hoverFill="rgba(51, 51, 51, 0.9)"
+                        onClick={handleImagePreviewClose}
+                    ></Icon>
+                    <img src={imagePreview} alt="" />
+                </div>
                 <div className="create-tweet-second-div">
                     <div className="create-tweet-second-div-icons">
-                        <Icon
-                            text="crop_original"
-                            fontSize="18px"
-                            width="35px"
-                            height="35px"
-                            color="#1d9bf0"
-                            hoverFill="#031e30"
-                        ></Icon>
+                        <div className="file-upload-div">
+                            <input
+                                type="file"
+                                accept="image/png, image/jpg, image/jpeg, image/webp"
+                                onChange={(e) => handleImagePreview(e)}
+                            />
+                            <Icon
+                                text="image"
+                                fontSize="18px"
+                                width="35px"
+                                height="35px"
+                                color="#1d9bf0"
+                                hoverFill="#031e30"
+                            ></Icon>
+                        </div>
                         <Icon
                             text="gif_box"
                             fontSize="18px"
@@ -128,6 +174,7 @@ const HomeMainBar = (props) => {
                     ></Button>
                 </div>
             </div>
+            <img src="" alt="" className="images" />
             <div className="tweets-cont">
                 <TweetsList tweetsList={tweetsList}></TweetsList>
             </div>

@@ -97,6 +97,11 @@ const Tweet = (props) => {
                 >
                     {tweet.tweet}
                 </div>
+                <img
+                    src={'https://twitter-niket.herokuapp.com/' + tweet.image}
+                    alt=""
+                    onClick={handleClickForTweetDetails}
+                />
                 <div className="tweet-actions">
                     <div
                         className="comment"
