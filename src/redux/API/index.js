@@ -6,7 +6,7 @@ axios.defaults.withCredentials = true;
 //     baseURL: 'http://localhost:5000/api/v1',
 // });
 const API = axios.create({
-    baseURL: 'https://twitter-niket.herokuapp.com/api/v1',
+    baseURL: 'https://twitter-nq1v.onrender.com/api/v1',
 });
 
 export const login = (authData) => API.post('/users/login', authData);
